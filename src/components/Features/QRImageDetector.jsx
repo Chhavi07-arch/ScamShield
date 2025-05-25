@@ -125,7 +125,11 @@ const QRImageDetector = () => {
       const data = await response.json();
       
       // Extract the response text
-      const responseText = data.candidates[0]?.content?.parts[0]?.text || '';
+      const responseText = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+      
+      if (!responseText) {
+        throw new Error('Empty response from Gemini API');
+      }
       
       // Find the JSON object in the response
       let analysisResult;
@@ -145,7 +149,19 @@ const QRImageDetector = () => {
         analysisResult = parseUnstructuredResponse(responseText);
       }
       
-      return analysisResult;
+      // Ensure all required fields exist to prevent errors
+      const safeResult = {
+        isQRCode: analysisResult.isQRCode || false,
+        riskLevel: analysisResult.riskLevel || 'Medium',
+        riskScore: analysisResult.riskScore || 50,
+        qrContent: analysisResult.qrContent || '',
+        suspiciousText: analysisResult.suspiciousText || '',
+        securityIssues: Array.isArray(analysisResult.securityIssues) ? analysisResult.securityIssues : [],
+        isManipulated: analysisResult.isManipulated || false,
+        explanation: analysisResult.explanation || 'Analysis complete.'
+      };
+      
+      return safeResult;
     } catch (error) {
       console.error('Error analyzing with Gemini:', error);
       throw error;
@@ -229,6 +245,11 @@ const QRImageDetector = () => {
       // Analyze the image with Gemini AI
       const analysisResult = await analyzeWithGemini(preview);
       
+      // Ensure securityIssues is always an array for consistency
+      if (!analysisResult.securityIssues) {
+        analysisResult.securityIssues = [];
+      }
+      
       // Generate result object
       const detectionResult = {
         fileType: file.type,
@@ -246,13 +267,13 @@ const QRImageDetector = () => {
               type: 'image',
               hasHiddenContent: false, 
               containsPhishing: analysisResult.securityIssues.some(issue => 
-                issue.toLowerCase().includes('phish')
+                issue.toLowerCase?.().includes('phish') || false
               ),
               manipulationScore: analysisResult.riskScore
             },
         riskScore: analysisResult.riskScore,
         riskLevel: analysisResult.riskLevel,
-        detectedIssues: analysisResult.securityIssues || [],
+        detectedIssues: Array.isArray(analysisResult.securityIssues) ? analysisResult.securityIssues : [],
         explanation: analysisResult.explanation || ''
       };
       
@@ -280,7 +301,7 @@ const QRImageDetector = () => {
         },
         riskScore: fallbackAnalysis.riskScore,
         riskLevel: fallbackAnalysis.riskLevel,
-        detectedIssues: ["Failed to analyze the image: " + err.message],
+        detectedIssues: fallbackAnalysis.securityIssues || [],
         explanation: "Local analysis indicates potential concerns with this image."
       };
       
@@ -510,16 +531,21 @@ const QRImageDetector = () => {
           )}
           
           {/* Issues detected */}
-          {result.detectedIssues.length > 0 && (
+          {result.detectedIssues && result.detectedIssues.length > 0 && (
             <div className="mb-4">
               <p className="text-sm font-medium mb-2 text-gray-900">Detected Issues</p>
               <ul className="space-y-1">
-                {result.detectedIssues.map((issue, index) => (
+                {Array.isArray(result.detectedIssues) ? result.detectedIssues.map((issue, index) => (
                   <li key={index} className="flex items-start">
                     <AlertTriangle className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-sm text-gray-900">{issue}</span>
                   </li>
-                ))}
+                )) : (
+                  <li className="flex items-start">
+                    <AlertTriangle className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-gray-900">Issue analyzing image</span>
+                  </li>
+                )}
               </ul>
             </div>
           )}
