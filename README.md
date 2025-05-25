@@ -1,74 +1,112 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
 # ScamShield
 
-ScamShield is a comprehensive web application designed to help users detect and protect themselves from various types of scams, including phone scams, message scams, QR code scams, and malicious URLs.
+<p align="center">
+  <img src="public/vite.svg" alt="ScamShield Logo" width="100" height="100">
+</p>
 
-## Features
+ScamShield is a comprehensive web application designed to help users detect and protect themselves from various types of online scams. In an increasingly digital world, scammers are becoming more sophisticated in their approaches. ScamShield provides a suite of tools to verify phone numbers, analyze suspicious messages, scan QR codes, and check URLs for potential threats, all in one user-friendly platform.
 
-- **Fake Phone Number Checker**: Verify if a phone number is legitimate or potentially fraudulent using the Numverify API
-- **Message/Text Scam Analyzer**: Analyze suspicious text messages to identify potential scams using pattern recognition
-- **QR Code & Image Detector**: Scan QR codes and images for malicious content using Tesseract.js for text recognition
-- **Link/URL Scanner**: Check URLs for security threats before visiting them using Google Safe Browsing API
-- **Dashboard**: View scam statistics and latest scam news
+## 🛡️ Features
 
-## Environment Variables
+- **Dashboard** - Central hub with scam statistics, latest scam news from NewsAPI.org, and quick access to all tools
+- **Fake Phone Number Checker** - Verify if a phone number is legitimate or potentially fraudulent
+- **Message/Text Scam Analyzer** - Analyze suspicious text messages to identify potential scams using pattern recognition
+- **QR Code & Image Detector** - Scan QR codes and images for malicious content using Tesseract.js for text recognition
+- **Link/URL Scanner** - Check URLs for security threats before visiting them
+- **Scam Game** - Educational game to test and improve your scam detection skills
+- **Responsive Design** - Works seamlessly on desktop and mobile devices
 
-The application uses several API keys for the different scam detection features. These keys should be stored in a `.env` file in the root directory of the project.
+## 🚀 Live Demo
 
-### Setting up the .env file
+Visit [ScamShield](https://github.com/Chhavi07-arch/ScamShield.git) to see the application in action.
 
-1. Create a `.env` file in the root directory of the project
-2. Add the following environment variables:
+## 🔧 Tech Stack
+
+- **Frontend Framework**: React.js
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: Custom components using Tailwind CSS
+- **Icons**: Lucide React
+- **API Integration**: NewsAPI.org for scam news
+- **OCR Technology**: Tesseract.js for text recognition in images
+- **Routing**: React Router
+- **Code Quality**: ESLint
+
+## 📂 Project Structure
 
 ```
-# ScamShield API Keys
-
-# Phone Number Verification API (Numverify)
-VITE_PHONE_API_KEY=your_numverify_api_key_here
-
-# URL Scanner API (Google Safe Browsing)
-VITE_URL_SCANNER_API_KEY=your_google_safe_browsing_api_key_here
+ScamShield/
+├── public/                 # Static files
+│   ├── vite.svg           # Logo
+│   ├── scam-news.json     # Fallback news data
+│   └── messages.json      # Sample message data
+│
+├── src/                    # Source files
+│   ├── assets/            # Images and other assets
+│   ├── components/        # React components
+│   │   ├── Dashboard/     # Dashboard components
+│   │   ├── Features/      # Feature components
+│   │   ├── Game/          # Scam game components
+│   │   ├── ScamDetector/  # Scam detection components
+│   │   └── ui/            # UI components
+│   │
+│   ├── pages/             # Page components
+│   │   ├── Dashboard.jsx  # Dashboard page
+│   │   ├── Home.jsx       # Home page
+│   │   ├── Game.jsx       # Game page
+│   │   └── Features.jsx   # Features page
+│   │
+│   ├── App.jsx            # Main App component
+│   ├── App.css            # App styles
+│   ├── main.jsx           # Entry point
+│   └── index.css          # Global styles
+│
+├── .env.example           # Example environment variables
+├── .gitignore             # Git ignore file
+├── package.json           # Project dependencies
+├── tailwind.config.js     # Tailwind CSS configuration
+└── vite.config.js         # Vite configuration
 ```
 
-3. Replace the placeholder values with your actual API keys
+## 🔌 Environment Variables
 
-> **Important**: Make sure the `.env` file is included in your `.gitignore` file to prevent accidentally committing your API keys to version control.
+The application uses API keys for news data. Create a `.env` file in the root directory with the following:
 
-### API Keys
-
-For production use, you'll need to obtain API keys from the following services:
-
-- **Phone verification**: [Numverify API](https://numverify.com/) - Provides phone number validation and information
-- **URL scanning**: [Google Safe Browsing API](https://developers.google.com/safe-browsing) - Checks URLs against Google's database of unsafe web resources
-
-## Dependencies
-
-- [React](https://reactjs.org/) - UI library
-- [Vite](https://vitejs.dev/) - Build tool and development server
-- [Tesseract.js](https://tesseract.projectnaptha.com/) - OCR (Optical Character Recognition) library for text detection in images
-- [Lucide React](https://lucide.dev/) - Icon library
-
-## Development
-
-To start the development server:
-
-```bash
-npm run dev
+```
+# News API key from newsapi.org
+VITE_NEWS_API_KEY=your_newsapi_org_key_here
 ```
 
-## Building for Production
+## 💻 Getting Started
+
+### Prerequisites
+
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Chhavi07-arch/ScamShield.git
+   cd ScamShield
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory and add your API keys (see Environment Variables section).
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+
+## 🏗️ Building for Production
 
 To build the application for production:
 
@@ -76,6 +114,28 @@ To build the application for production:
 npm run build
 ```
 
-## License
+The built files will be in the `dist` directory.
 
-[MIT](https://choosealicense.com/licenses/mit/)
+## 🧪 Future Enhancements
+
+- Integration with more scam detection APIs
+- User accounts to save scan history
+- Community-reported scam database
+- Browser extension for real-time protection
+- Mobile app version
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📜 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📬 Contact
+
+For any questions or feedback, please reach out to [your-email@example.com](mailto:your-email@example.com).
+
+---
+
+Made with ❤️ by Chhavi Ahlawat
