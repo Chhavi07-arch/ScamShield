@@ -50,7 +50,6 @@ ScamShield is a comprehensive web application designed to help users detect and 
 - **Intuitive Interface**: Clean, modern UI that's easy to navigate for users of all technical abilities
 - **Real-time Results**: Get immediate feedback and analysis
 - **Comprehensive Reporting**: Detailed explanations of all detection results
-- **Dark/Light Modes**: Comfortable viewing experience in any environment
 
 ## 🚀 Live Demo
 
@@ -178,18 +177,7 @@ The built files will be in the `dist` directory.
 - Community-reported scam database
 - Browser extension for real-time protection
 - Mobile app version
-
-## 👥 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📜 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📬 Contact
-
-For any questions or feedback, please reach out to [your-email@example.com](mailto:your-email@example.com).
+- Dark/Light Modes for comfortable viewing experience in any environment
 
 ---
 
