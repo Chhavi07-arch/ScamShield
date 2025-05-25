@@ -73,13 +73,13 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   to="/dashboard" 
-                  className="bg-primary-600 text-white font-medium py-3 px-8 rounded-md hover:bg-primary-700 transition-colors transform hover:-translate-y-1 hover:shadow-lg"
+                  className="bg-primary-600 text-white font-medium py-3 px-8 rounded-md hover-darker-red transition-colors transform hover:-translate-y-1 hover:shadow-lg"
                 >
                   Get Started
                 </Link>
                 <Link 
                   to="/features" 
-                  className="bg-transparent text-white font-medium py-3 px-8 rounded-md border border-white hover:bg-white/10 transition-colors transform hover:-translate-y-1"
+                  className="bg-transparent text-white font-medium py-3 px-8 rounded-md border border-white hover:bg-white/10 hover-white-text transition-colors transform hover:-translate-y-1"
                 >
                   Learn More
                 </Link>
@@ -178,7 +178,7 @@ const Home = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-full mb-4">
                   <Shield className="h-6 w-6 text-primary-600" />
                 </div>
@@ -188,7 +188,7 @@ const Home = () => {
                 </p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-full mb-4">
                   <AlertTriangle className="h-6 w-6 text-primary-600" />
                 </div>
@@ -198,7 +198,7 @@ const Home = () => {
                 </p>
               </div>
               
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-full mb-4">
                   <BarChart3 className="h-6 w-6 text-primary-600" />
                 </div>
@@ -229,11 +229,11 @@ const Home = () => {
             ScamShield offers comprehensive tools to keep you safe from all types of scams
           </p>
           
-          <div className="max-w-4xl mx-auto space-y-24">
+          <div className="max-w-5xl mx-auto space-y-24">
             {/* Text Message Analysis */}
             <div className="feature-card" data-aos="fade-right" data-direction="right" ref={el => featureCardsRef.current[0] = el}>
               <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2 flex flex-col md:flex-row">
-                <div className="md:w-2/5 bg-gradient-to-br from-primary-700 to-primary-900 p-6 flex items-center justify-center">
+                <div className="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-900 p-6 flex items-center justify-center">
                   <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +251,7 @@ const Home = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="md:w-3/5 p-6">
+                <div className="md:w-2/3 p-6">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">Text Message Analysis</h3>
                   <p className="text-gray-600 mb-4">
                     Detect suspicious text messages and identify potential scams with our advanced AI analysis. Our system can recognize urgent language, suspicious links, and other common tactics used by scammers.
@@ -274,12 +274,12 @@ const Home = () => {
             {/* Phone Number Validation */}
             <div className="feature-card ml-auto" data-aos="fade-left" data-direction="left" ref={el => featureCardsRef.current[1] = el}>
               <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2 flex flex-col md:flex-row-reverse">
-                <div className="md:w-2/5 bg-gradient-to-br from-primary-700 to-primary-900 p-6 flex items-center justify-center">
+                <div className="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-900 p-6 flex items-center justify-center">
                   <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center">
                     <Smartphone className="h-10 w-10 text-white" />
                   </div>
                 </div>
-                <div className="md:w-3/5 p-6">
+                <div className="md:w-2/3 p-6">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">Phone Number Validation</h3>
                   <p className="text-gray-600 mb-4">
                     Verify if a phone number is legitimate or potentially fraudulent before you respond. Our system checks against known scam patterns and identifies spoofed caller IDs to keep you safe.
@@ -302,12 +302,12 @@ const Home = () => {
             {/* QR Code Scanner */}
             <div className="feature-card" data-aos="fade-right" data-direction="right" ref={el => featureCardsRef.current[2] = el}>
               <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2 flex flex-col md:flex-row">
-                <div className="md:w-2/5 bg-gradient-to-br from-primary-700 to-primary-900 p-6 flex items-center justify-center">
+                <div className="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-900 p-6 flex items-center justify-center">
                   <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center">
                     <QrCode className="h-10 w-10 text-white" />
                   </div>
                 </div>
-                <div className="md:w-3/5 p-6">
+                <div className="md:w-2/3 p-6">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">QR Code Scanner</h3>
                   <p className="text-gray-600 mb-4">
                     Scan QR codes safely to ensure they don't lead to malicious websites or phishing attempts. Our scanner previews the destination URL and checks against a database of known malicious sites.
@@ -332,12 +332,12 @@ const Home = () => {
             {/* Link Scanner */}
             <div className="feature-card ml-auto" data-aos="fade-left" data-direction="left" ref={el => featureCardsRef.current[3] = el}>
               <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2 flex flex-col md:flex-row-reverse">
-                <div className="md:w-2/5 bg-gradient-to-br from-primary-700 to-primary-900 p-6 flex items-center justify-center">
+                <div className="md:w-1/3 bg-gradient-to-br from-primary-700 to-primary-900 p-6 flex items-center justify-center">
                   <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center">
                     <LinkIcon className="h-10 w-10 text-white" />
                   </div>
                 </div>
-                <div className="md:w-3/5 p-6">
+                <div className="md:w-2/3 p-6">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">Link Scanner</h3>
                   <p className="text-gray-600 mb-4">
                     Check if a link is safe before clicking by analyzing its destination for potential threats. Our scanner expands shortened URLs and detects lookalike domains designed to trick users.
@@ -361,11 +361,11 @@ const Home = () => {
           </div>
           
           <div className="mt-16 text-center">
-            <Link 
-              to="/features" 
-              className="inline-block bg-primary-600 text-white font-medium py-3 px-8 rounded-md hover:bg-primary-700 transition-colors transform hover:-translate-y-1 hover:shadow-lg"
+            <Link
+              to="/features"
+              className="inline-block bg-primary-600 text-white font-medium py-3 px-8 rounded-md hover-darker-red transition-colors transform hover:-translate-y-1 hover:shadow-lg"
             >
-              Explore All Features
+              Explore Features
             </Link>
           </div>
         </div>
@@ -377,11 +377,11 @@ const Home = () => {
           <p className="text-gray-600 mb-6">
             Join thousands of users who trust ScamShield to keep them safe from scams
           </p>
-          <Link 
-            to="/game" 
-            className="inline-block bg-primary-600 text-white font-medium py-3 px-6 rounded-md hover:bg-primary-700 transition-colors"
+          <Link
+            to="/game"
+            className="inline-block bg-primary-600 text-white font-medium py-3 px-6 rounded-md hover-darker-red transition-colors"
           >
-            Try Our Scam Detection Game
+            Play Now
           </Link>
         </div>
       </section>

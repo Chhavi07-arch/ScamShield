@@ -33,10 +33,10 @@ const Features = () => {
                 <li>Provides risk assessment with detailed explanations</li>
               </ul>
               <Link 
-                to="/dashboard" 
-                className="inline-block bg-primary-600 text-white font-medium py-2 px-4 rounded-md hover:bg-primary-700 transition-colors"
+                to="/features/message-analyzer" 
+                className="inline-block bg-primary-600 text-white font-medium py-2 px-4 rounded-md hover-darker-red transition-colors"
               >
-                Try Text Analysis
+                Try the Message Analyzer
               </Link>
             </div>
           </section>
@@ -57,10 +57,10 @@ const Features = () => {
                 <li>Provides safety recommendations</li>
               </ul>
               <Link 
-                to="/dashboard" 
-                className="inline-block bg-primary-600 text-white font-medium py-2 px-4 rounded-md hover:bg-primary-700 transition-colors"
+                to="/features/phone-checker" 
+                className="inline-block bg-primary-600 text-white font-medium py-2 px-4 rounded-md hover-darker-red transition-colors"
               >
-                Validate Phone Numbers
+                Try the Number Checker
               </Link>
             </div>
           </section>
@@ -120,9 +120,9 @@ const Features = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/dashboard" 
-              className="bg-primary-600 text-white font-medium py-3 px-6 rounded-md hover:bg-primary-700 transition-colors"
+              className="bg-primary-600 text-white font-medium py-3 px-6 rounded-md hover-darker-red transition-colors"
             >
-              Get Started
+              Go to Dashboard
             </Link>
             <Link 
               to="/game" 

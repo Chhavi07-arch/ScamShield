@@ -85,7 +85,7 @@ const ScamGame = () => {
         
         <button
           onClick={resetGame}
-          className="bg-primary-600 text-white py-2 px-6 rounded-md hover:bg-primary-700 transition-colors"
+          className="bg-primary-600 text-white py-2 px-6 rounded-md hover-darker-red transition-colors"
         >
           Play Again
         </button>
@@ -152,7 +152,7 @@ const ScamGame = () => {
           
           <button
             onClick={handleNext}
-            className="w-full bg-primary-600 text-white py-2 px-4 rounded-md hover:bg-primary-700 transition-colors"
+            className="w-full bg-primary-600 text-white py-2 px-4 rounded-md hover-darker-red transition-colors"
           >
             Next Message
           </button>

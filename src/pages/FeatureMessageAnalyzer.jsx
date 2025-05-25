@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowLeft, ArrowRight } from 'lucide-react';
 import MessageAnalyzer from '../components/Features/MessageAnalyzer';
 
 const FeatureMessageAnalyzer = () => {
@@ -76,7 +76,7 @@ const FeatureMessageAnalyzer = () => {
         
         <Link 
           to="/features/qr-detector" 
-          className="bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-md transition-colors inline-flex items-center"
+          className="bg-primary-600 hover-darker-red text-white py-2 px-4 rounded-md transition-colors inline-flex items-center"
         >
           Next: QR Code Detector
           <ChevronRight className="h-4 w-4 ml-1" />

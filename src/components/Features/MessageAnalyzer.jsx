@@ -316,8 +316,8 @@ const MessageAnalyzer = () => {
         
         <button
           type="submit"
-          disabled={isAnalyzing}
-          className="bg-primary-600 text-white py-2 px-6 rounded-md hover:bg-primary-700 transition-colors disabled:bg-primary-400 disabled:cursor-not-allowed flex items-center justify-center"
+          disabled={isAnalyzing || !message}
+          className="bg-primary-600 text-white py-2 px-6 rounded-md hover-darker-red transition-colors disabled:bg-primary-400 disabled:cursor-not-allowed flex items-center justify-center"
         >
           {isAnalyzing ? (
             <>

@@ -55,11 +55,11 @@ const Game = () => {
           </ul>
           
           <div className="flex justify-center">
-            <Link 
-              to="/dashboard" 
-              className="bg-primary-600 text-white font-medium py-2 px-6 rounded-md hover:bg-primary-700 transition-colors"
+            <Link
+              to="/game/play"
+              className="bg-primary-600 text-white font-medium py-2 px-6 rounded-md hover-darker-red transition-colors"
             >
-              Explore More ScamShield Tools
+              Start Game
             </Link>
           </div>
         </div>

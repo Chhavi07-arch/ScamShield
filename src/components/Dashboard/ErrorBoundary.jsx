@@ -25,9 +25,9 @@ class ErrorBoundary extends Component {
           <p className="text-gray-600 mb-4">{this.props.fallbackMessage || 'We could not load this component'}</p>
           <button 
             onClick={() => this.setState({ hasError: false, error: null })}
-            className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm hover:bg-primary-700"
+            className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm hover-darker-red"
           >
-            Try again
+            Try Again
           </button>
         </div>
       );

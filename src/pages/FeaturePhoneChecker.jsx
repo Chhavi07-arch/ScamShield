@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, ArrowLeft, ArrowRight } from 'lucide-react';
 import FakeNumberChecker from '../components/Features/FakeNumberChecker';
 
 const FeaturePhoneChecker = () => {
@@ -54,19 +54,20 @@ const FeaturePhoneChecker = () => {
       </div>
       
       <div className="mt-8 flex justify-between flex-wrap gap-4">
-        <Link 
-          to="/features" 
+        <Link
+          to="/dashboard"
           className="bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded-md transition-colors inline-flex items-center"
         >
-          <ChevronLeft className="h-4 w-4 mr-1" />
-          All Features
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to Dashboard
         </Link>
         
-        <Link 
-          to="/features/message-analyzer" 
-          className="bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-md transition-colors inline-flex items-center"
+        <Link
+          to="/features"
+          className="bg-primary-600 hover-darker-red text-white py-2 px-4 rounded-md transition-colors inline-flex items-center"
         >
-          Next: Message Scam Analyzer
+          View All Features
+          <ArrowRight className="ml-2 h-4 w-4" />
         </Link>
       </div>
     </div>

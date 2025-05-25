@@ -56,7 +56,7 @@ const ScamText = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-primary-600 text-white py-2 px-4 rounded-md hover:bg-primary-700 transition-colors"
+          className="w-full bg-primary-600 text-white py-2 px-4 rounded-md hover-darker-red transition-colors"
         >
           Analyze Message
         </button>

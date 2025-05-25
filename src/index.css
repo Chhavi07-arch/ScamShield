@@ -58,6 +58,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@layer components {
+  /* Custom hover class for red buttons */
+  .hover-darker-red:hover {
+    background-color: #a51717 !important; /* Darker than primary-700 */
+    color: white !important; /* Keep text white */
+  }
+  
+  /* Custom hover class for the Learn More button */
+  .hover-white-text:hover {
+    color: white !important; /* Keep text white on hover */
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import LinkScanner from '../components/Features/LinkScanner';
 
 const FeatureLinkScanner = () => {
@@ -91,9 +91,10 @@ const FeatureLinkScanner = () => {
         
         <Link 
           to="/features" 
-          className="bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-md transition-colors inline-flex items-center"
+          className="bg-primary-600 hover-darker-red text-white py-2 px-4 rounded-md transition-colors inline-flex items-center"
         >
-          View All Features
+          All Features
+          <ChevronRight className="h-4 w-4 ml-1" />
         </Link>
       </div>
     </div>

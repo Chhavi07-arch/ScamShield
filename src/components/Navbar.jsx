@@ -133,7 +133,7 @@ const Navbar = () => {
             <NavLink to="/game">Game</NavLink>
             <Link 
               to="/dashboard" 
-              className="bg-primary-600 text-white py-2 px-4 rounded-md hover:bg-primary-700 transition-colors"
+              className="bg-primary-600 text-white py-2 px-4 rounded-md hover-darker-red transition-colors"
             >
               Get Started
             </Link>
@@ -204,7 +204,7 @@ const Navbar = () => {
           <NavLink mobile to="/game">Game</NavLink>
           <Link 
             to="/dashboard" 
-            className="bg-primary-600 text-white py-2 px-4 rounded-md hover:bg-primary-700 transition-colors inline-block"
+            className="bg-primary-600 text-white py-2 px-4 rounded-md hover-darker-red transition-colors inline-block"
           >
             Get Started
           </Link>

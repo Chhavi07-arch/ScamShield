@@ -59,8 +59,13 @@ const Features = () => {
                 <h2 className="text-xl font-bold text-gray-800 mb-2">{tool.title}</h2>
                 <p className="text-gray-600 mb-4">{tool.description}</p>
                 <div className="flex items-center text-primary-600 font-medium">
-                  Try Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link
+                    to={tool.path}
+                    className="bg-primary-600 text-white py-3 px-8 rounded-md hover-darker-red transition-colors inline-flex items-center"
+                  >
+                    <span>Try It Now</span>
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -117,21 +122,6 @@ const Features = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Need More Protection?</h2>
-        <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-          For comprehensive protection against all types of scams, consider creating an account to access additional features, 
-          real-time monitoring, and personalized alerts.
-        </p>
-        <Link 
-          to="/signup" 
-          className="bg-primary-600 text-white py-3 px-8 rounded-md hover:bg-primary-700 transition-colors inline-flex items-center"
-        >
-          Get Started
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
       </div>
     </div>
   );
