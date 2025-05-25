@@ -1,0 +1,84 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "New Phishing Campaign Targeting Banking Customers",
+      "description": "A sophisticated phishing campaign is targeting customers of major banks with fake security alerts. Users are advised to verify all communications directly with their bank.",
+      "date": "2024-05-20",
+      "source": "Cybersecurity News",
+      "url": "https://www.consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+    },
+    {
+      "id": 2,
+      "title": "QR Code Scams on the Rise",
+      "description": "Scammers are placing malicious QR codes in public places to steal personal information. Always verify the URL before entering sensitive information.",
+      "date": "2024-05-18",
+      "source": "Tech Alert",
+      "url": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-scams-and-crimes/qr-codes"
+    },
+    {
+      "id": 3,
+      "title": "Text Message Scams Impersonating Delivery Services",
+      "description": "Fraudsters are sending fake delivery notification texts with malicious links. Never click on suspicious links claiming to be from delivery services.",
+      "date": "2024-05-15",
+      "source": "Consumer Protection Agency",
+      "url": "https://consumer.ftc.gov/articles/package-delivery-text-scams"
+    },
+    {
+      "id": 4,
+      "title": "Investment Scams Using Social Media",
+      "description": "Scammers are using social media platforms to promote fake investment opportunities. Be wary of promises of high returns with little or no risk.",
+      "date": "2024-05-14",
+      "source": "Financial Protection Bureau",
+      "url": "https://www.sec.gov/investor/pubs/investmentfraud.htm"
+    },
+    {
+      "id": 5,
+      "title": "Romance Scams Costing Victims Millions",
+      "description": "Online romance scams continue to be one of the most financially devastating scams, with victims losing millions annually to fraudsters posing as potential partners.",
+      "date": "2024-05-12",
+      "source": "Fraud Alert Center",
+      "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2022/02/reports-romance-scams-hit-record-highs-2021"
+    },
+    {
+      "id": 6,
+      "title": "Government Impersonation Scams Increase",
+      "description": "Scammers pretending to be from government agencies are contacting people demanding payments or personal information. Government agencies never call demanding immediate payment.",
+      "date": "2024-05-10",
+      "source": "Government Security Alert",
+      "url": "https://www.usa.gov/common-scams-frauds#item-35157"
+    },
+    {
+      "id": 7,
+      "title": "Fake Tech Support Calls Target Seniors",
+      "description": "Scammers posing as tech support representatives are targeting seniors, claiming their computers are infected with viruses and demanding payment for services.",
+      "date": "2024-05-08",
+      "source": "Elder Fraud Protection",
+      "url": "https://www.aarp.org/money/scams-fraud/info-2019/tech-support.html"
+    },
+    {
+      "id": 8,
+      "title": "Cryptocurrency Scams Reach New Heights",
+      "description": "Fraudulent cryptocurrency schemes have reached record levels, with scammers using everything from fake exchanges to Ponzi schemes to defraud investors.",
+      "date": "2024-05-05",
+      "source": "Digital Currency Monitor",
+      "url": "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2021/05/cryptocurrency-buzz-drives-record-investment-scam-losses"
+    },
+    {
+      "id": 9,
+      "title": "Job Scams Targeting Remote Workers",
+      "description": "Fake job listings for remote positions are being used to collect personal information or trick victims into money laundering schemes involving fraudulent checks.",
+      "date": "2024-05-03",
+      "source": "Employment Security Center",
+      "url": "https://www.bbb.org/article/scams/12261-scam-alert-how-to-spot-a-job-scam"
+    },
+    {
+      "id": 10,
+      "title": "AI-Generated Voice Scams Impersonating Family Members",
+      "description": "A new wave of scams using AI to clone voices is targeting people with calls that sound like distressed family members in need of immediate financial help.",
+      "date": "2024-05-01",
+      "source": "Digital Protection Agency",
+      "url": "https://www.ftc.gov/business-guidance/blog/2023/03/voice-cloning-scams-ai-brings-new-twist-grandparent-scam"
+    }
+  ]
+} 
