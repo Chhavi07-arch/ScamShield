@@ -53,7 +53,7 @@ ScamShield is a comprehensive web application designed to help users detect and 
 
 ## 🚀 Live Demo
 
-Visit [ScamShield](https://github.com/Chhavi07-arch/ScamShield.git) to see the application in action.
+Visit [ScamShield](https://scam-shield-zeta.vercel.app/) to see the application in action.
 
 ## 🔧 Tech Stack
 
