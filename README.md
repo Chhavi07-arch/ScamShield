@@ -73,7 +73,6 @@ Visit [ScamShield](https://scam-shield-zeta.vercel.app/) to see the application 
 - **OCR Technology**: Tesseract.js for text recognition in images
 
 ### Development Tools
-- **Code Quality**: ESLint
 - **Version Control**: Git & GitHub
 - **Package Management**: npm
 
